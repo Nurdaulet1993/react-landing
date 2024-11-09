@@ -1,0 +1,24 @@
+.wrapper {
+    background: linear-gradient(230.95deg, #CB1AE8 -0.37%, #37BDA6 100%);
+}
+
+.container {
+    max-width: 1300px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 20px 36px;
+    border-radius: 39px;
+    border-color: transparent;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.btn-outline-light {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
