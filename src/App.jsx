@@ -2,7 +2,7 @@ import './App.css'
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import { Outlet } from "react-router-dom";
-import { useEffect, useState } from "react";
+import {useEffect, useRef, useState} from "react";
 
 const BASE_URL = 'https://jsonplaceholder.typicode.com';
 
@@ -10,7 +10,8 @@ function App() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
+  const abortControllerRef = useRef(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
